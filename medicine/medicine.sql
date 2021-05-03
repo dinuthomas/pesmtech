@@ -3,8 +3,12 @@
 * 
 * @Auther: MTechProject Team
 * @UpdateHistory: <Updater>-<date>-<Update Details>
-* Dinu Thomas-16/4/2021-Created the first copy 
-* TODO , pls insert the data according to the design and add the change details as per the format
+* Dinu Thomas-02/05/2021-Added create scripts for the tables
+* Dinu Thomas-03/05/2021-updated insert statements for doctor database
+*
+* TODO , pls insert the data according to the design and 
+* add the change details as per the format<Updater>-<date>-<Update Details>
+* pls use the same comment in the commit message
 */
 
 create database medicine;
