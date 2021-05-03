@@ -19,6 +19,16 @@ CREATE TABLE doctor (
   adhar_id INTEGER NOT NULL
 ); 
 
+INSERT INTO doctor VALUES(18,'Sudhakar Reddy','Medical Officer',111111111);
+INSERT INTO doctor VALUES(19,'Rajaram Mohan','Physician',111111112);
+INSERT INTO doctor VALUES(23,'Sunny Kuttan','Pcychiatrist',111111113);
+INSERT INTO doctor VALUES(27,'Annie Kurian','Pediatrician',111111114);
+INSERT INTO doctor VALUES(28,'Mohan Kumar','Oncologist',111111115);
+INSERT INTO doctor VALUES(33,'Mahendra Saraf','Gynacologist',111111116);
+INSERT INTO doctor VALUES(35,'Arvind Sawakar','Cardiologist',111111117);
+INSERT INTO doctor VALUES(38,'Suresh Kumar','Emergency',111111119);
+INSERT INTO doctor VALUES(44,'Venugopal','Emergency',111111120);
+
 CREATE TABLE Department (
   DepartmentID INTEGER PRIMARY KEY NOT NULL,
   Name TEXT NOT NULL,
