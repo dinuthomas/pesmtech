@@ -1,5 +1,5 @@
 /**
-* The table designed for medicine project. 
+* The aggregate queries for medicine project. 
 * 
 * @Auther: MTechProject Team
 * Dinu Thomas-09/05/2021- added Prescription column, medicine set into Prescription table
@@ -32,21 +32,6 @@ left join
 select EmployeeID,Department from doctor left join (medical_departmets)
 on doctor.EmployeeID = medical_departmets.doctorId
 where medical_departmets.PrimaryDepartment = True;
-
-
-select Department,sum(apnt_count) from 
-(select EmployeeID,Name as DoctorName,Position,apnt_count from
-(select doctorId,count(*) as apnt_count from Appointment group by doctorId) t1
-left join 
-(select EmployeeID,Name,Position from doctor) t2
-on t1.doctorId = t2.EmployeeID
-order by apnt_count)a1
-left joinā
-(select EmployeeID,Department from doctor left join (medical_departmets)
-on doctor.EmployeeID = medical_departmets.doctorIdā
-where medical_departmets.PrimaryDepartment = True)a2
-on a2.EmployeeID = a1.EmployeeID
-group by Department;
 
 
 select *, round((total_apnt/dept_strength),1) as apntPerDoc from(select Department,sum(apnt_count)as total_apnt from 
