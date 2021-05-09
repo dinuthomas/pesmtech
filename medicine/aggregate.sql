@@ -1,5 +1,5 @@
 /**
-* The table designed for medicine project. 
+* The aggregate queries for medicine project. 
 * 
 * @Auther: MTechProject Team
 * Dinu Thomas-09/05/2021- added Prescription column, medicine set into Prescription table
