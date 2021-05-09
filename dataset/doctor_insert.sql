@@ -1,4 +1,4 @@
-/**
+	/**
 * The insert statements for doctor table. 
 * 
 * @Auther: MTechProject Team

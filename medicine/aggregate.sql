@@ -56,4 +56,11 @@ left join
 )b2
 on b1.Department = b2.Department;
 
+
+select doctorId,Department,count(*) as dept_strength from medical_departmets
+where PrimaryDepartment = True group by Department;
+
+
+
+
  

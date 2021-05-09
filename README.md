@@ -1,6 +1,9 @@
 # pesmtech
 
 How to commit your Changes,
+Step 0:
+$ git clone https://github.com/dinuthomas/pesmtech.git
+
 Step 1: Check the changed files
 
 $ git status
