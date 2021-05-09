@@ -25,9 +25,11 @@ warning: LF will be replaced by CRLF in medicine/medicine.sql.
 The file will have its original line endings in your working directory.
                                                                                                                                                                           
 Step 3: Commit your changes. Add commit message which explains what you have modified
+
 $ git commit                                                                                                                                                                                                                    
 [master 7a23bec]        modified:   medicine/medicine.sql
  1 file changed, 17 insertions(+), 49 deletions(-)
 
 Step 4: Push your changes into the remote repository.
+
 $ git push 'https://github.com/dinuthomas/pesmtech'
