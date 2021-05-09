@@ -22,6 +22,8 @@ no changes added to commit (use "git add" and/or "git commit -a")
 Step 2: Select the specific files to be added.
 
 $ git add medicine/medicine.sql
+
+
 warning: LF will be replaced by CRLF in medicine/medicine.sql.
 The file will have its original line endings in your working directory.
                                                                                                                                                                           
