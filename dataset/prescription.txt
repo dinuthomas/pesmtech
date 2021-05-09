@@ -1,0 +1,38 @@
+ACEinhibitors. (Enalapril, Benazapril) ...
+Amiodarone. arrhythmias including supraventricular and ventricular arrhythmias. ...
+Amlodipine. ...
+BetaBlockers. ...
+Cephalosporins. ...
+Clopidogrel. ...
+Digoxin. ...
+Diltiazem.
+
+cardiologyst:
+Anticoagulants
+Antiplatelet Agents and Dual Antiplatelet Therapy
+ACE Inhibitors
+Angiotensin II Receptor Blockers
+Angiotensin Receptor-Neprilysin Inhibitors
+Beta Blockers
+Calcium Channel Blockers
+Cholesterol-lowering medications
+Digitalis Preparations
+Diuretics
+Vasodilators
+
+gynacologyst
+Cervicitis (21 drugs)
+Ectopic Pregnancy (1 drug)
+Endometrial Hyperplasia (10 drugs in 3 topics)
+Endometriosis (76 drugs in 2 topics)
+Endometritis (13 drugs)
+Female Infertility (61 drugs in 4 topics)
+Hysterectomy (1 drug)
+Menstrual Disorders (142 drugs in 6 topics)
+Oophorectomy (42 drugs in 2 topics)
+Ovarian Cysts (32 drugs)
+Pelvic Infections (50 drugs in 2 topics)
+Polycystic Ovary Syndrome (26 drugs)
+Uterine Bleeding (86 drugs in 5 topics)
+Uterine Fibroids (5 drugs)
+Uterine Leiomyomata (3 drugs)
