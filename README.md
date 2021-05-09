@@ -4,6 +4,7 @@ How to commit your Changes,
 Step 1: Check the changed files
 
 $ git status
+
 On branch master
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
