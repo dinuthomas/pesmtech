@@ -61,6 +61,91 @@ select doctorId,Department,count(*) as dept_strength from medical_departmets
 where PrimaryDepartment = True group by Department;
 
 
+# The SUM() and AVG() aggregate functions do not work with temporal values
+select EmployeeID,Name as DoctorName,Position,
+count(*) as apnt_count,
+avg(time_to_sec(timediff(End,Start))/60) as avgConTime
+from Appointment as t1 left join  doctor t2 on t1.doctorId = t2.EmployeeID
+group by t1.doctorId order by avgConTime desc;
+
+select EmployeeID,Name as DoctorName,Position,
+count(*) as apnt_count,
+avg(timediff(End,Start)) as avgConTime
+from Appointment as t1 left join  doctor t2 on t1.doctorId = t2.EmployeeID
+group by t1.doctorId order by avgConTime desc;
+
+
+select AppointmentID,doctorId,
+((time_to_sec(End)-time_to_sec(Start))/60) as conTime,
+time_to_sec(timediff(End,Start))/60 as conTime2,
+avg(End-start) as conTime3
+from Appointment
+where doctorId = 68;
+
+select AppointmentID,doctorId,
+((time_to_sec(End)-time_to_sec(Start))/60) as conTime
+from Appointment
+where doctorId between 69 and 20;
+
+
+select do.EmployeeID,do.Name, Department,
+group_concat(de.Name) as serving_depts
+from doctor do,medical_departmets md, department de
+where do.EmployeeID = md.doctorId and md.Department = de.DepartmentID 
+group by do.EmployeeID having serving_depts like '%,%';
+
+
+select do.EmployeeID,do.Name, Department,de.Head,
+group_concat(de.Name) as ser_depts_form1,
+json_arrayagg(de.Name) as ser_depts_form2
+from doctor do,medical_departmets md, department de
+where do.EmployeeID = md.doctorId and md.Department = de.DepartmentID 
+group by do.EmployeeID;
+
+select Department, Head,doc.Name as HeadName,
+json_objectagg(emp,DocName) as subord_id_name
+from
+(select do.EmployeeID as emp,do.Name as DocName, Department,de.Head as Head
+from doctor do,medical_departmets md, department de
+where do.EmployeeID = md.doctorId and md.Department = de.DepartmentID 
+) as detail left join doctor doc on detail.Head = doc.EmployeeID
+group by Head;
+
+
+select EmployeeID,Name as DoctorName,Position,
+count(*) as apnt_count,
+round(max(time_to_sec(timediff(End,Start))/60),1) as max_consult,
+round(min(time_to_sec(timediff(End,Start))/60),1) as min_consult,
+round(stddev_samp(time_to_sec(timediff(End,Start))/60),1) as std_deviaton,
+round(var_samp(time_to_sec(timediff(End,Start))/60),1) as variance,
+avg(time_to_sec(timediff(End,Start))/60) as avgConTime
+from Appointment as t1 left join  doctor t2 on t1.doctorId = t2.EmployeeID
+group by t1.doctorId order by avgConTime desc;
+
+
+select EmployeeID,Name as DoctorName,Position,
+count(*) as apnt_count,
+round(avg(time_to_sec(timediff(End,Start))/60),1) as avg_consult
+from Appointment as t1 left join  doctor t2 on t1.doctorId = t2.EmployeeID
+group by t1.doctorId having avg_consult < 
+(select round(avg(time_to_sec(timediff(End,Start))/60),1) as tot_avg_consult
+from Appointment) order by avg_consult asc;
+
+
+select EmployeeID,Name as DoctorName,Position,
+count(AppointmentID) as apnt_count,
+round(avg(time_to_sec(timediff(End,Start))/60),1) as avg_consult
+from Appointment as t1 left join  doctor t2 on t1.doctorId = t2.EmployeeID
+group by t1.doctorId having avg_consult < 
+(select round(avg(time_to_sec(timediff(End,Start))/60),1) as tot_avg_consult
+from Appointment) order by avg_consult asc;
+
+
+
+
+
+
+
 
 
  
